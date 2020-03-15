@@ -6,4 +6,6 @@ target 'todolist' do
   pod 'IGListKit', '~> 4.0.0'
   pod 'MaterialComponents/Dialogs'
   pod 'MaterialComponents/Buttons'
+  pod 'MaterialComponents/TextFields'
+  pod 'MaterialComponents/Cards'
 end

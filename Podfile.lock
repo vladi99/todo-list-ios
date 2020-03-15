@@ -15,6 +15,14 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
+  - MaterialComponents/Cards (107.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Icons/ic_check_circle
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
   - MaterialComponents/Dialogs (107.2.0):
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
@@ -32,9 +40,13 @@ PODS:
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (107.2.0)
   - MaterialComponents/private/Application (107.2.0)
   - MaterialComponents/private/Color (107.2.0):
     - MaterialComponents/Availability
+  - MaterialComponents/private/Icons/Base (107.2.0)
+  - MaterialComponents/private/Icons/ic_check_circle (107.2.0):
+    - MaterialComponents/private/Icons/Base
   - MaterialComponents/private/KeyboardWatcher (107.2.0):
     - MaterialComponents/private/Application
   - MaterialComponents/private/Math (107.2.0)
@@ -49,6 +61,14 @@ PODS:
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
+  - MaterialComponents/TextFields (107.2.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Buttons
+    - MaterialComponents/Elevation
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/Typography (107.2.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
@@ -61,7 +81,9 @@ PODS:
 DEPENDENCIES:
   - IGListKit (~> 4.0.0)
   - MaterialComponents/Buttons
+  - MaterialComponents/Cards
   - MaterialComponents/Dialogs
+  - MaterialComponents/TextFields
   - YogaKit (~> 1.18.1)
 
 SPEC REPOS:
@@ -83,6 +105,6 @@ SPEC CHECKSUMS:
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 3f8fe3e23d9337379e9586b188a37a9b9e68bc90
+PODFILE CHECKSUM: 930c88a96add0b0dd5d4d2b9d04c17b575f349b4
 
 COCOAPODS: 1.9.1

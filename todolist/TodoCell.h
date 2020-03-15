@@ -1,18 +1,18 @@
 //
-//  TodoSectionController.h
+//  TodoCell.h
 //  todolist
 //
 //  Created by Vladimir Petrov on 15/03/2020.
 //  Copyright © 2020 Vladimir Petrov. All rights reserved.
 //
 
-#import <IGListKit/IGListKit.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TodoSectionController : IGListSectionController
+@interface TodoCell : UICollectionViewCell
 
--(instancetype)initWithTodos:(NSArray<NSString *> *) todos;
+@property(nonatomic) NSString *text;
 
 @end
 

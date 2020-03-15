@@ -19,6 +19,7 @@
 		C8A49016241E319500BA7C35 /* todolistUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A49015241E319500BA7C35 /* todolistUITests.m */; };
 		C8A4902E241E381400BA7C35 /* TodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A4902D241E381400BA7C35 /* TodoViewController.m */; };
 		C8C4ECC3241E64170057E1E5 /* TodoSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C4ECC2241E64170057E1E5 /* TodoSectionController.m */; };
+		C8D40734241E72A400332847 /* TodoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D40733241E72A400332847 /* TodoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		C8A4902D241E381400BA7C35 /* TodoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoViewController.m; sourceTree = "<group>"; };
 		C8C4ECC1241E64170057E1E5 /* TodoSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoSectionController.h; sourceTree = "<group>"; };
 		C8C4ECC2241E64170057E1E5 /* TodoSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoSectionController.m; sourceTree = "<group>"; };
+		C8D40732241E72A400332847 /* TodoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoCell.h; sourceTree = "<group>"; };
+		C8D40733241E72A400332847 /* TodoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoCell.m; sourceTree = "<group>"; };
 		CFD9CD6F8D72A2CD61A3086B /* Pods_todolist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_todolist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				C8A48FEE241E319400BA7C35 /* AppDelegate.h */,
+				C8D40732241E72A400332847 /* TodoCell.h */,
+				C8D40733241E72A400332847 /* TodoCell.m */,
 				C8A48FEF241E319400BA7C35 /* AppDelegate.m */,
 				C8A48FF1241E319400BA7C35 /* SceneDelegate.h */,
 				C8A48FF2241E319400BA7C35 /* SceneDelegate.m */,
@@ -351,6 +356,7 @@
 				C8A4902E241E381400BA7C35 /* TodoViewController.m in Sources */,
 				C8A48FF3241E319400BA7C35 /* SceneDelegate.m in Sources */,
 				C8C4ECC3241E64170057E1E5 /* TodoSectionController.m in Sources */,
+				C8D40734241E72A400332847 /* TodoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A66169FF7C8847162BC0B80 /* Pods-todolist.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = todolist/Info.plist;
@@ -536,6 +543,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8DF3DFE474694E8EF95C5D85 /* Pods-todolist.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = todolist/Info.plist;
