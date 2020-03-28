@@ -22,7 +22,7 @@
         _label = [[UILabel alloc] init];
         _label.text = @"Text";
         [self.contentView addSubview:_label];
-        
+
         _deleteButton = [[MDCButton alloc] initWithFrame:CGRectZero];
         _deleteButton.layer.borderColor = [UIColor blackColor].CGColor;
         [_deleteButton setTitle:@"Delete" forState:UIControlStateNormal];
@@ -33,22 +33,22 @@
 
 -(void)layoutSubviews {
     [super layoutSubviews];
-    
+
     [self.contentView configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
         layout.flexDirection = YGFlexDirectionRow;
     }];
-    
+
     [_label configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
         layout.margin = YGPointValue(8);
         layout.flexGrow = 1;
     }];
-    
+
     [_deleteButton configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
     }];
-    
+
     [self.contentView.yoga applyLayoutPreservingOrigin:YES];
 }
 

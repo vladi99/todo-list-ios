@@ -2,9 +2,9 @@ PODS:
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
-  - MaterialComponents/AnimationTiming (107.2.0)
-  - MaterialComponents/Availability (107.2.0)
-  - MaterialComponents/Buttons (107.2.0):
+  - MaterialComponents/AnimationTiming (107.4.0)
+  - MaterialComponents/Availability (107.4.0)
+  - MaterialComponents/Buttons (107.4.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -15,7 +15,7 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
-  - MaterialComponents/Cards (107.2.0):
+  - MaterialComponents/Cards (107.4.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/private/Icons/ic_check_circle
@@ -23,7 +23,7 @@ PODS:
     - MaterialComponents/Ripple
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Shapes
-  - MaterialComponents/Dialogs (107.2.0):
+  - MaterialComponents/Dialogs (107.4.0):
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
     - MaterialComponents/private/KeyboardWatcher
@@ -32,36 +32,37 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
-  - MaterialComponents/Elevation (107.2.0):
+  - MaterialComponents/Elevation (107.4.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/Ink (107.2.0):
+  - MaterialComponents/Ink (107.4.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/Palettes (107.2.0)
-  - MaterialComponents/private/Application (107.2.0)
-  - MaterialComponents/private/Color (107.2.0):
+  - MaterialComponents/Palettes (107.4.0)
+  - MaterialComponents/private/Application (107.4.0)
+  - MaterialComponents/private/Color (107.4.0):
     - MaterialComponents/Availability
-  - MaterialComponents/private/Icons/Base (107.2.0)
-  - MaterialComponents/private/Icons/ic_check_circle (107.2.0):
+  - MaterialComponents/private/Icons/Base (107.4.0)
+  - MaterialComponents/private/Icons/ic_check_circle (107.4.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/KeyboardWatcher (107.2.0):
+  - MaterialComponents/private/KeyboardWatcher (107.4.0):
     - MaterialComponents/private/Application
-  - MaterialComponents/private/Math (107.2.0)
-  - MaterialComponents/Ripple (107.2.0):
+  - MaterialComponents/private/Math (107.4.0)
+  - MaterialComponents/Ripple (107.4.0):
     - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/ShadowElevations (107.2.0)
-  - MaterialComponents/ShadowLayer (107.2.0):
+  - MaterialComponents/ShadowElevations (107.4.0)
+  - MaterialComponents/ShadowLayer (107.4.0):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/Shapes (107.2.0):
+  - MaterialComponents/Shapes (107.4.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - MaterialComponents/TextFields (107.2.0):
+  - MaterialComponents/TextFields (107.4.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
@@ -69,7 +70,7 @@ PODS:
     - MaterialComponents/private/Math
     - MaterialComponents/Typography
     - MDFInternationalization
-  - MaterialComponents/Typography (107.2.0):
+  - MaterialComponents/Typography (107.4.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
@@ -84,7 +85,7 @@ DEPENDENCIES:
   - MaterialComponents/Cards
   - MaterialComponents/Dialogs
   - MaterialComponents/TextFields
-  - YogaKit (~> 1.18.1)
+  - YogaKit (from `https://github.com/vladi99/yoga.git`, commit `3f10871c6ee85802577cf64880eaf1d3bc691f11`)
 
 SPEC REPOS:
   trunk:
@@ -94,17 +95,26 @@ SPEC REPOS:
     - MDFInternationalization
     - MDFTextAccessibility
     - Yoga
-    - YogaKit
+
+EXTERNAL SOURCES:
+  YogaKit:
+    :commit: 3f10871c6ee85802577cf64880eaf1d3bc691f11
+    :git: https://github.com/vladi99/yoga.git
+
+CHECKOUT OPTIONS:
+  YogaKit:
+    :commit: 3f10871c6ee85802577cf64880eaf1d3bc691f11
+    :git: https://github.com/vladi99/yoga.git
 
 SPEC CHECKSUMS:
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
-  MaterialComponents: 4dd1927cd2257e564983018906e152d18cda0c03
+  MaterialComponents: 52e2ade4684e3017eff7f62587b37522d217ea50
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 930c88a96add0b0dd5d4d2b9d04c17b575f349b4
+PODFILE CHECKSUM: 020d47926500c0236ead0e297f0627e3c5370338
 
 COCOAPODS: 1.9.1

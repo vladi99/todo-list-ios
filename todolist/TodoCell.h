@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MaterialCards.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TodoCell : UICollectionViewCell
+@interface TodoCell : MDCCardCollectionCell
 
 @property(nonatomic) NSString *text;
 
