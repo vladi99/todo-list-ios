@@ -138,22 +138,22 @@
 			isa = PBXGroup;
 			children = (
 				C8A48FEE241E319400BA7C35 /* AppDelegate.h */,
-				C8D40732241E72A400332847 /* TodoCell.h */,
-				C8D40733241E72A400332847 /* TodoCell.m */,
 				C8A48FEF241E319400BA7C35 /* AppDelegate.m */,
+				C8A48FFA241E319500BA7C35 /* Assets.xcassets */,
+				C8A48FFF241E319500BA7C35 /* Info.plist */,
+				C8A48FFC241E319500BA7C35 /* LaunchScreen.storyboard */,
+				C8A49000241E319500BA7C35 /* main.m */,
+				C8A48FF7241E319400BA7C35 /* Main.storyboard */,
 				C8A48FF1241E319400BA7C35 /* SceneDelegate.h */,
 				C8A48FF2241E319400BA7C35 /* SceneDelegate.m */,
-				C8A48FF4241E319400BA7C35 /* ViewController.h */,
-				C8A4902C241E381400BA7C35 /* TodoViewController.h */,
-				C8A4902D241E381400BA7C35 /* TodoViewController.m */,
-				C8A48FF5241E319400BA7C35 /* ViewController.m */,
-				C8A48FF7241E319400BA7C35 /* Main.storyboard */,
-				C8A48FFA241E319500BA7C35 /* Assets.xcassets */,
-				C8A48FFC241E319500BA7C35 /* LaunchScreen.storyboard */,
-				C8A48FFF241E319500BA7C35 /* Info.plist */,
-				C8A49000241E319500BA7C35 /* main.m */,
+				C8D40732241E72A400332847 /* TodoCell.h */,
+				C8D40733241E72A400332847 /* TodoCell.m */,
 				C8C4ECC1241E64170057E1E5 /* TodoSectionController.h */,
 				C8C4ECC2241E64170057E1E5 /* TodoSectionController.m */,
+				C8A4902C241E381400BA7C35 /* TodoViewController.h */,
+				C8A4902D241E381400BA7C35 /* TodoViewController.m */,
+				C8A48FF4241E319400BA7C35 /* ViewController.h */,
+				C8A48FF5241E319400BA7C35 /* ViewController.m */,
 			);
 			path = todolist;
 			sourceTree = "<group>";
@@ -240,7 +240,7 @@
 		C8A48FE3241E319400BA7C35 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Vladimir Petrov";
 				TargetAttributes = {
 					C8A48FEA241E319400BA7C35 = {

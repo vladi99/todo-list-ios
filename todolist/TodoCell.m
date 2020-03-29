@@ -12,20 +12,19 @@
 
 @implementation TodoCell {
     UILabel *_label;
-    MDCButton *_deleteButton;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor grayColor];
+        self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.10];
 
         _label = [[UILabel alloc] init];
         _label.text = @"Text";
         [self.contentView addSubview:_label];
 
         _deleteButton = [[MDCButton alloc] initWithFrame:CGRectZero];
-        _deleteButton.layer.borderColor = [UIColor blackColor].CGColor;
         [_deleteButton setTitle:@"Delete" forState:UIControlStateNormal];
+        _deleteButton.backgroundColor = [UIColor grayColor];
         [self.contentView addSubview:_deleteButton];
     }
     return self;

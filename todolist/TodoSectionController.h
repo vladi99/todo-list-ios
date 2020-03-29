@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TodoSectionController : IGListSectionController
 
--(instancetype)initWithTodos:(NSArray<NSString *> *) todos;
+-(instancetype)initWithTodos:(NSArray<NSString *> *) todos deleteCallback:(void (^)(NSInteger index))deleteCallback;
 
 @end
 

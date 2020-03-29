@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MaterialCards.h"
+#import "MaterialButtons.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TodoCell : MDCCardCollectionCell
 
 @property(nonatomic) NSString *text;
+@property(nonatomic, readonly) MDCButton *deleteButton;
 
 @end
 

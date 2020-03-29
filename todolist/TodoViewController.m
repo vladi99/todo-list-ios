@@ -27,6 +27,7 @@
         _todos = [NSArray array];
         UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add)];
         self.navigationItem.rightBarButtonItem = add;
+        self.navigationItem.title = @"Todos";
     }
     
     return self;
@@ -38,6 +39,7 @@
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    collectionView.backgroundColor =[UIColor whiteColor];
     
     adapter.collectionView = collectionView;
     adapter.dataSource = self;
@@ -46,20 +48,17 @@
     self.view  = collectionView;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.navigationItem.title = @"Todos";
-    self.view.backgroundColor = [UIColor whiteColor];
-}
-
 #pragma mark - IGListAdapterDataSource
 
 - (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
-    return @[[[NSDate date] description]];
+    return @[ @([NSDate timeIntervalSinceReferenceDate]) ];
 }
 
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
-    return [[TodoSectionController alloc] initWithTodos:_todos];
+    __weak typeof(self) weakSelf = self;
+    return [[TodoSectionController alloc] initWithTodos:_todos deleteCallback:^(NSInteger index) {
+        [weakSelf deleteItem:index];
+    }];
 }
 
 - (UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter {
@@ -98,6 +97,13 @@
 
     [alertController addAction:alertAction];
     [self presentViewController:alertController animated:YES completion:nil];
+}
+
+-(void) deleteItem:(NSInteger)index {
+    NSMutableArray *todos = [NSMutableArray arrayWithArray:_todos];
+    [todos removeObjectAtIndex:index];
+    _todos = todos;
+    [self updateTodos];
 }
 
 -(void) updateTodos {
