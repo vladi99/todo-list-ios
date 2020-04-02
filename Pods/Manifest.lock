@@ -75,6 +75,9 @@ PODS:
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
+  - sqlite3 (3.31.1):
+    - sqlite3/common (= 3.31.1)
+  - sqlite3/common (3.31.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -85,6 +88,7 @@ DEPENDENCIES:
   - MaterialComponents/Cards
   - MaterialComponents/Dialogs
   - MaterialComponents/TextFields
+  - sqlite3
   - YogaKit (from `https://github.com/vladi99/yoga.git`, commit `3f10871c6ee85802577cf64880eaf1d3bc691f11`)
 
 SPEC REPOS:
@@ -94,6 +98,7 @@ SPEC REPOS:
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
+    - sqlite3
     - Yoga
 
 EXTERNAL SOURCES:
@@ -112,9 +117,10 @@ SPEC CHECKSUMS:
   MaterialComponents: 52e2ade4684e3017eff7f62587b37522d217ea50
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  sqlite3: d72537554fb149ce43ece11a2fe6d42d21b3743f
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 020d47926500c0236ead0e297f0627e3c5370338
+PODFILE CHECKSUM: e511c59a02bf1df91a1edf2287c67cba1149f49e
 
 COCOAPODS: 1.9.1
