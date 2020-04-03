@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DBManager : NSObject
 
+@property (nonatomic, strong) NSMutableArray *arrColumnNames;
+@property (nonatomic) int affectedRows;
+@property (nonatomic) long long lastInsertedRowID;
+
+-(instancetype)initWithDatabaseFileName:(NSString *)dbFilename;
+-(NSArray *)loadDataFromDB:(NSString *)query;
+-(void)executeQuery:(NSString *)query;
+
 @end
 
 NS_ASSUME_NONNULL_END
