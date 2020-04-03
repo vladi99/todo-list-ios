@@ -102,7 +102,7 @@
     
     __weak typeof(self) weakSelf = self;
     MDCAlertAction *alertAction =
-        [MDCAlertAction actionWithTitle:@"OK"
+        [MDCAlertAction actionWithTitle:@"Add TODO"
                                 handler:^(MDCAlertAction *action) {
             typeof(self) strongSelf = weakSelf;
             if(!strongSelf) {
@@ -113,8 +113,11 @@
             [self.dbManager executeQuery:query];
             [self loadData];
         }];
-
     [alertController addAction:alertAction];
+
+    MDCAlertAction *cancelAction = [MDCAlertAction actionWithTitle:@"Cancel" emphasis:MDCActionEmphasisMedium handler:^(MDCAlertAction *action) {}];
+    [alertController addAction:cancelAction];
+    
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
