@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DBManager : NSObject
 
-@property (nonatomic, strong) NSMutableArray *arrColumnNames;
+@property (nonatomic, strong, nullable) NSMutableArray *arrColumnNames;
 @property (nonatomic) int affectedRows;
 @property (nonatomic) long long lastInsertedRowID;
 

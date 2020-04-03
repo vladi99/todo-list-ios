@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		234B9EC8A870B5338DD0D466 /* Pods_todolist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD9CD6F8D72A2CD61A3086B /* Pods_todolist.framework */; };
 		C89F72AD2436AB1100C8A232 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C89F72AC2436AB1100C8A232 /* DBManager.m */; };
+		C89F72AF2436C2E500C8A232 /* todolistdb.sql in Resources */ = {isa = PBXBuildFile; fileRef = C89F72AE2436C2E400C8A232 /* todolistdb.sql */; };
 		C8A48FF0241E319400BA7C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A48FEF241E319400BA7C35 /* AppDelegate.m */; };
 		C8A48FF3241E319400BA7C35 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A48FF2241E319400BA7C35 /* SceneDelegate.m */; };
 		C8A48FF6241E319400BA7C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A48FF5241E319400BA7C35 /* ViewController.m */; };
@@ -45,6 +46,7 @@
 		8DF3DFE474694E8EF95C5D85 /* Pods-todolist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todolist.release.xcconfig"; path = "Target Support Files/Pods-todolist/Pods-todolist.release.xcconfig"; sourceTree = "<group>"; };
 		C89F72AB2436AB1100C8A232 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		C89F72AC2436AB1100C8A232 /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		C89F72AE2436C2E400C8A232 /* todolistdb.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = todolistdb.sql; sourceTree = "<group>"; };
 		C8A48FEB241E319400BA7C35 /* todolist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todolist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A48FEE241E319400BA7C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C8A48FEF241E319400BA7C35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				C8A48FF4241E319400BA7C35 /* ViewController.h */,
 				C8A48FF5241E319400BA7C35 /* ViewController.m */,
 				C89F72AB2436AB1100C8A232 /* DBManager.h */,
+				C89F72AE2436C2E400C8A232 /* todolistdb.sql */,
 				C89F72AC2436AB1100C8A232 /* DBManager.m */,
 			);
 			path = todolist;
@@ -286,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C89F72AF2436C2E500C8A232 /* todolistdb.sql in Resources */,
 				C8A48FFE241E319500BA7C35 /* LaunchScreen.storyboard in Resources */,
 				C8A48FFB241E319500BA7C35 /* Assets.xcassets in Resources */,
 				C8A48FF9241E319400BA7C35 /* Main.storyboard in Resources */,

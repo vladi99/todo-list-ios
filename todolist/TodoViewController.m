@@ -11,23 +11,31 @@
 #import <IGListKit/IGListKit.h>
 #import "MaterialDialogs.h"
 #import "MaterialTextFields.h"
+#import "DBManager.h"
 
 @interface TodoViewController ()<IGListAdapterDataSource, UITextViewDelegate>
-    @property(nonatomic) MDCDialogTransitionController *dialogTransitionController;
-    @property(nonatomic) MDCTextInputControllerUnderline *textFieldController;
+
+@property(nonatomic) MDCDialogTransitionController *dialogTransitionController;
+@property(nonatomic) MDCTextInputControllerUnderline *textFieldController;
+@property(nonatomic, strong) DBManager *dbManager;
+
+-(void)loadData;
+
 @end
 
 @implementation TodoViewController {
     IGListAdapter *_adapter;
-    NSArray<NSString *> *_todos;
+    NSArray *_todos;
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        _todos = [NSArray array];
         UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add)];
         self.navigationItem.rightBarButtonItem = add;
         self.navigationItem.title = @"Todos";
+        
+        self.dbManager = [[DBManager alloc] initWithDatabaseFileName:@"todolistdb.sql"];
+        [self loadData];
     }
     
     return self;
@@ -48,6 +56,17 @@
     self.view  = collectionView;
 }
 
+-(void)loadData{
+    NSString *query = @"select * from todos";
+
+    if (_todos != nil) {
+        _todos = nil;
+    }
+    _todos = [[NSArray alloc] initWithArray:[self.dbManager loadDataFromDB:query]];
+
+    [self updateTodos];
+}
+
 #pragma mark - IGListAdapterDataSource
 
 - (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
@@ -56,7 +75,7 @@
 
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
     __weak typeof(self) weakSelf = self;
-    return [[TodoSectionController alloc] initWithTodos:_todos deleteCallback:^(NSInteger index) {
+    return [[TodoSectionController alloc] initWithTodos:_todos properties:self.dbManager.arrColumnNames deleteCallback:^(NSInteger index) {
         [weakSelf deleteItem:index];
     }];
 }
@@ -89,10 +108,10 @@
             if(!strongSelf) {
                 return;
             }
-            
-            NSArray *newTodos = [strongSelf->_todos arrayByAddingObject:textField.text];
-            strongSelf->_todos = newTodos;
-            [strongSelf updateTodos];
+
+            NSString *query = [NSString stringWithFormat:@"insert into todos values(null, '%@')", textField.text];
+            [self.dbManager executeQuery:query];
+            [self loadData];
         }];
 
     [alertController addAction:alertAction];
@@ -100,10 +119,11 @@
 }
 
 -(void) deleteItem:(NSInteger)index {
-    NSMutableArray *todos = [NSMutableArray arrayWithArray:_todos];
-    [todos removeObjectAtIndex:index];
-    _todos = todos;
-    [self updateTodos];
+    int recordIDToDelete = [[[_todos objectAtIndex:index] objectAtIndex:0] intValue];
+
+    NSString *query = [NSString stringWithFormat:@"delete from todos where todoID=%d", recordIDToDelete];
+    [self.dbManager executeQuery:query];
+    [self loadData];
 }
 
 -(void) updateTodos {

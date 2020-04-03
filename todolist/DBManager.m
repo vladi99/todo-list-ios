@@ -45,7 +45,7 @@
 
 - (void)copyDatabaseIntoDocumentsDirectory{
     NSString *destinationPath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:destinationPath]) {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:destinationPath]) {
         NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseFilename];
         NSError *error;
         [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:destinationPath error:&error];
@@ -90,11 +90,11 @@
 
                         if (dbDataAsChars != NULL) {
                             [arrDataRow addObject:[NSString  stringWithUTF8String:dbDataAsChars]];
-                        }
-
-                        if (self.arrColumnNames.count != totalColumns) {
-                            dbDataAsChars = (char *)sqlite3_column_name(compiledStatement, i);
-                            [self.arrColumnNames addObject:[NSString stringWithUTF8String:dbDataAsChars]];
+                            
+                            if (self.arrColumnNames.count != totalColumns) {
+                                dbDataAsChars = (char *)sqlite3_column_name(compiledStatement, i);
+                                [self.arrColumnNames addObject:[NSString stringWithUTF8String:dbDataAsChars]];
+                            }
                         }
                     }
                     

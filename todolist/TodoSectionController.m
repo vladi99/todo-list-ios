@@ -8,6 +8,7 @@
 
 #import "TodoSectionController.h"
 #import "TodoCell.h"
+#import "DBManager.h"
 
 @interface TodoCellController : NSObject
 
@@ -37,13 +38,15 @@
 @end
 
 @implementation TodoSectionController {
-    NSArray<NSString *> *_todos;
+    NSArray *_todos;
     NSArray<TodoCellController *> *_cellControllers;
+    NSArray<NSString *> *_properties;
 }
 
-- (instancetype)initWithTodos:(NSArray<NSString *> *)todos deleteCallback:(nonnull void (^)(NSInteger))deleteCallback {
+- (instancetype)initWithTodos:(NSArray*)todos properties:(NSArray<NSString *> *)properties deleteCallback:(nonnull void (^)(NSInteger))deleteCallback {
     if (self = [super init]) {
         _todos = [todos copy];
+        _properties = [properties copy];
         
         NSMutableArray *controllers = [NSMutableArray array];
         for (NSInteger i = 0; i < [_todos count]; ++i) {
@@ -62,7 +65,11 @@
 
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
     TodoCell *cell = [self.collectionContext dequeueReusableCellOfClass:[TodoCell class] forSectionController:self atIndex:index];
-    cell.text = _todos[index];
+    
+    NSInteger indexOfTitle = [_properties indexOfObject:@"title"];
+    NSString *title = [[_todos objectAtIndex:index] objectAtIndex:indexOfTitle];
+    
+    cell.text = title;
     TodoCellController *controller = _cellControllers[index];
     [cell.deleteButton addTarget:controller action:@selector(didDelete) forControlEvents:UIControlEventTouchUpInside];
     return cell;
