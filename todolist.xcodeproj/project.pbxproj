@@ -248,7 +248,7 @@
 		C8A48FE3241E319400BA7C35 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Vladimir Petrov";
 				TargetAttributes = {
 					C8A48FEA241E319400BA7C35 = {
